@@ -1,7 +1,49 @@
-#board {
-  width: 500px;
-  height:500px
+#overboard{
+  margin-left:25%;
+
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
-#cell1 #cell2 #cell3 #cell4 #cell5 #cell6 #cell7 #cell8 #cell9{
-  
+
+#board {
+  width: 600px;
+  height: 600px;
+}
+
+#board div{
+  width: 200px;
+  height: 200px;
+  float:left;
+  outline: 1px solid #000000;
+}
+#board div:hover {
+  background-color: black;
+}
+.crossBox {
+  background-color: red;
+  font-size: 160px;
+  text-align: center;
+  font-family:sans-serif;
+}
+
+.knotBox {
+  background-color: blue;
+  font-size: 160px;
+  text-align: center;
+  color:white;
+  font-family:sans-serif;
+}
+.crossTarget {
+
+}
+.knotTarget {
+
+}
+#player1{
+  position:absolute;
+  margin-left: -200px;
+}
+#player2{
+
 }
