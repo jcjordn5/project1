@@ -1,10 +1,20 @@
-var game = {
- gameOn:true,
- start: function (){
-   this.gameOn = true;
-   while(this.gameOn === true){
+var player1 = {
+  score:0,
+  $name:$('#player1').val(),
+  sign:"O"
+};
 
-   }
+var player2 = {
+  score:0,
+  $name:$('#player2').val(),
+  sign:"X"
+};
+
+var game = {
+    player:player1,
+   gameOn:true,
+   start: function (){
+     this.gameOn = true;
  },
  $cross:("<div class='crossBox'>" + "X" + "</div>"),
  $knot:("<div class='knotBox'>" + "O" + "</div>"),
@@ -16,17 +26,14 @@ var game = {
 
  //this method alternates turns by switching the player property and event listener everytime a grid box is appended
   turn: function () {
+    $(event.target).closest('div').append('<div class="crossBox">' + this.player.sign + '</div>');
+    this.checkWinner();
     if (this.player === player1) {
-      $(event.target).closest('div').append('<div class="crossBox">' + 'X' + '</div>');
-      this.checkWinner();
       this.player = player2;
     }
-    else {
-      $(event.target).closest('div').append('<div class="knotBox">' + 'O' + '</div>');
-      this.checkWinner();
-      this.player = player1;
-
-    }
+    else{
+        this.player = player1;
+      }
 
   },
  checkWinner: function () {
@@ -76,16 +83,7 @@ this.gameOn = false;
  }*/
 };
 
-var player1 = {
-score:0,
-$name:$('#player1').val()
-};
 
-var player2 = {
-  score:0,
-  $name:$('#player2').val()
-
-};
 
 $('#cell1').one('click', function () {game.turn()});
 $('#cell2').one('click', function () {game.turn()});
