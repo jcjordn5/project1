@@ -87,15 +87,15 @@ var player2 = {
 
 };
 
-$('#cell1').on('click', function () {game.turn()});
-$('#cell2').on('click', function () {game.turn()});
-$('#cell3').on('click', function () {game.turn()});
-$('#cell4').on('click', function () {game.turn()});
-$('#cell5').on('click', function () {game.turn()});
-$('#cell6').on('click', function () {game.turn()});
-$('#cell7').on('click', function () {game.turn()});
-$('#cell8').on('click', function () {game.turn()});
-$('#cell9').on('click', function () {game.turn()});
+$('#cell1').one('click', function () {game.turn()});
+$('#cell2').one('click', function () {game.turn()});
+$('#cell3').one('click', function () {game.turn()});
+$('#cell4').one('click', function () {game.turn()});
+$('#cell5').one('click', function () {game.turn()});
+$('#cell6').one('click', function () {game.turn()});
+$('#cell7').one('click', function () {game.turn()});
+$('#cell8').one('click', function () {game.turn()});
+$('#cell9').one('click', function () {game.turn()});
 //$('#reset').on('click', function () {game.render()});
 $('#setName1').on('click', function () {$('#playerBoard').append('<h2 id="name1">' + $('#player1').val() + '</h2>')});
 $('#setName2').on('click', function () {$('#playerBoard').append('<h2 id="name2">' + $('#player2').val() + '</h2>')});
