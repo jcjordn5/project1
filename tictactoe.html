@@ -5,11 +5,13 @@
   <title>TICTACTOE!!!</title>
 </head>
 <body>
-  <div id="overboard">
-    <input type="text" placeholder="player1 enter your name" id="player1"></input>
-    <div id= "player1score">0</div>
-    <input type="text" placeholder="player2 enter your name" id="player2"></input>
-    <div id= "player2score">0</div>
+  <div id="overBoard">
+    <div id="playerBoard">
+      <input type="text" placeholder="player1 enter your name" id="player1"></input>
+      <button id="setName1">Submit</button>
+      <input type="text" placeholder="player2 enter your name" id="player2"></input>
+      <button id="setName2">Submit</button>
+    </div>
     <div id= "board">
       <div id="cell1"></div>
       <div id="cell2"></div>
@@ -21,8 +23,6 @@
       <div id="cell8"></div>
       <div id="cell9"></div>
   </div>
-
-  <div id="sublet"><button id="Reset">Reset</button></div>
 </div>
 <script src="tictactoe.js"></script>
 </body>

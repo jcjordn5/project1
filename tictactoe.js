@@ -39,7 +39,7 @@ var game = {
    (this.cells[0][2].text() === this.cells[1][2].text() && this.cells[0][2].text() === this.cells[2][2].text() && (this.cells[0][2].text() === "X")) ||
    (this.cells[0][0].text() === this.cells[1][1].text() && this.cells[0][0].text() === this.cells[2][2].text() && (this.cells[0][0].text() === "X")) ||
    (this.cells[0][2].text() === this.cells[1][1].text() && this.cells[0][2].text() === this.cells[2][0].text() && (this.cells[0][2].text() === "X"))){
-$("#board").append("<h2>" +  $('#player2').val() +" WINS!!!</h2>");
+$("#board").append("<h2 id='result'>" +  $('#name2').html().toUpperCase() +" WINS!!!</h2>");
 this.gameOn = false;
     }
     else if
@@ -51,7 +51,7 @@ this.gameOn = false;
       (this.cells[0][2].text() === this.cells[1][2].text() && this.cells[0][2].text() === this.cells[2][2].text() && (this.cells[0][2].text() === "O")) ||
       (this.cells[0][0].text() === this.cells[1][1].text() && this.cells[0][0].text() === this.cells[2][2].text() && (this.cells[0][0].text() === "O")) ||
       (this.cells[0][2].text() === this.cells[1][1].text() && this.cells[0][2].text() === this.cells[2][0].text() && (this.cells[0][2].text() === "O"))){
-      $("#board").append("<h2>" +  $('#player1').val() + " WINS!!!</h2>");
+      $("#board").append("<h2 id='result'>" + $('#name1').html().toUpperCase() + " WINS!!!</h2>");
       this.gameOn = false;
     }
 
@@ -61,18 +61,19 @@ this.gameOn = false;
    === "O"))
    && ((this.cells[0][2].text() === "X") || (this.cells[0][2].text() === "O")) && ((this.cells[1][2].text() === "X") || (this.cells[1][2].text() === "O"))
    && ((this.cells[2][2].text() === "X") || (this.cells[2][2].text() === "O"))){
-     $("#board").append("<h2>TIE!!!</h2>");
+     $("#board").append("<h2 id='result'>TIE!!!</h2>");
      this.gameOn = false;
    }
  },
  //render resets the game by going through the two dimensional array cells and resets their value to null
- render: function () {
+ /*render: function () {
    for (var i = 0; i < this.cells.length; i++){
      for (var j = 0; j < this.cells[i].length; j++) {
-       this.cells[i][j].remove('div');
+       this.cells[i][j].remove('#knotBox');
+       this.cells[i][j].remove('#crossBox');
      }
    }
- }
+ }*/
 };
 
 var player1 = {
@@ -95,4 +96,10 @@ $('#cell6').on('click', function () {game.turn()});
 $('#cell7').on('click', function () {game.turn()});
 $('#cell8').on('click', function () {game.turn()});
 $('#cell9').on('click', function () {game.turn()});
-$('#reset').on('click', function () {game.render()});
+//$('#reset').on('click', function () {game.render()});
+$('#setName1').on('click', function () {$('#playerBoard').append('<h2 id="name1">' + $('#player1').val() + '</h2>')});
+$('#setName2').on('click', function () {$('#playerBoard').append('<h2 id="name2">' + $('#player2').val() + '</h2>')});
+$('#setName1').on('click', function () {$('#player1').remove()});
+$('#setName2').on('click', function () {$('#player2').remove()});
+$('#setName1').on('click', function () {$('#setName1').remove()});
+$('#setName2').on('click', function () {$('#setName2').remove()});
