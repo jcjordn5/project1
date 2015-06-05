@@ -46,5 +46,18 @@
 }
 #player2{
   position:absolute;
-  margin-left: 100px;
+  margin-left: -200px;
+  margin-top:40px;
+}
+#player1score {
+  position:absolute;
+  margin-left: -200px;
+  text-align:center;
+  margin-top:20px;
+}
+#player2score {
+    position:absolute;
+    margin-left: -200px;
+    text-align:center;
+    margin-top:60px;
 }
