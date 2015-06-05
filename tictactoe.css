@@ -45,5 +45,6 @@
   margin-left: -200px;
 }
 #player2{
-
+  position:absolute;
+  margin-left: 100px;
 }
