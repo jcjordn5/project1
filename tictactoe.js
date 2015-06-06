@@ -12,27 +12,30 @@ var player2 = {
 
 var game = {
     player:player1,
-   gameOn:true,
-   start: function (){
-     this.gameOn = true;
- },
+   gameOn:false,
  cells: [[$("#cell1"), $("#cell4"), $("#cell7")],
           [$("#cell2"), $("#cell5"), $("#cell8")],
           [$("#cell3"), $("#cell6"), $("#cell9")]],
 
-
-
+run: function () {
+  if (player1.name !== "" && player2.name !== "") {
+    this.gameOn = true;
+    $("#board div:hover").css("background-color", "black;");
+  }
+},
  //this method alternates turns by switching the player property and event listener everytime a grid box is appended
   turn: function () {
     if (this.gameOn){
-      $(event.target).closest('div').html('<div class="knotBox">' + this.player.sign + '</div>');
-      this.checkWinner();
       if (this.player === player1) {
+        $(event.target).closest('div').html('<div class="crossBox">' + this.player.sign + '</div>');
+        this.checkWinner();
         this.player = player2;
       }
-      else if (this.player === player2){
-          this.player = player1;
-        }
+      else {
+        $(event.target).closest('div').html('<div class="knotBox">' + this.player.sign + '</div>');
+        this.checkWinner();
+        this.player = player1;
+      }
     }
   },
  checkWinner: function () {
@@ -80,7 +83,6 @@ this.gameOn = false;
    }
    $('#result').remove();
    this.setListeners();
-   this.player = player1;
    this.gameOn = true;
  },
  setListeners: function () {
@@ -101,10 +103,12 @@ $('#reset').on('click', function () {game.render()});
 $('#setName1').on('click', function () {
   $('#playerBoard').append('<h2 id="name1">' + $('#player1').val() + '</h2>');
   player1.name = $('#player1').val();
+  game.run();
 });
 $('#setName2').on('click', function () {
   $('#playerBoard').append('<h2 id="name2">' + $('#player2').val() + '</h2>')
   player2.name = $('#player2').val();
+  game.run();
 });
 $('#setName1').on('click', function () {$('#player1').remove()});
 $('#setName2').on('click', function () {$('#player2').remove()});
