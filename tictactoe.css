@@ -1,5 +1,5 @@
 body {
-  font-family: Press Start 2P;
+  font-family: 'Press Start 2P', cursive;
 }
 #overboard {
   left:26%;
@@ -29,7 +29,7 @@ body {
 #title {
   color: white;
   text-align: center;
-  font-size: 150px;
+  font-size: 100px;
   margin-top: 10px;
 }
 .top {
@@ -39,7 +39,7 @@ body {
   font-size: 36px;
 }
 @keyframes shrink {
-  0% {font-size: 150px;}
+  0% {font-size: 100px;}
   100% {font-size: 36px;}
 }
 #board {
@@ -62,7 +62,7 @@ body {
   background-color: white;
   font-size: 160px;
   text-align: center;
-  font-family:sans-serif;
+  font-family: 'Press Start 2P', cursive;
 }
 .knotBox {
   width: 200px;
@@ -71,20 +71,20 @@ body {
   font-size: 160px;
   text-align: center;
   color:white;
-  font-family:sans-serif;
+  font-family: 'Press Start 2P', cursive;
 }
 .displayLeft {
   position: absolute;
   display: inline-block;
   margin-left: 25vw;
-  margin-top: -1vw;
+  margin-top: 9vw;
   transform: rotateY(360deg);
 }
 .displayRight {
   position: absolute;
   display: inline-block;
   margin-left: 56vw;
-  margin-top: -1vw;
+  margin-top: 9vw;
   transform: rotateY(360deg);
 }
 .shiftRight {
@@ -146,14 +146,14 @@ body {
 #setNames {
   z-index: 2;
   margin-top:6vw;
-  margin-left: 36.75em;
+  margin-left: 44vw;
   position: relative;
   background-color: white;
   color: black;
 }
 #reset {
   margin-top: .5vw;
-  margin-left: 20.5vw;
+  margin-left: 19vw;
   margin-right: auto;
   display: block;
   position: absolute;
@@ -167,7 +167,7 @@ body {
   text-align: center;
   left: 10%;
   top: 40%;
-  font-size: 72px;
+  font-size: 60px;
 }
 #first {
   animation-name: reveal-first;
@@ -195,4 +195,10 @@ body {
 @keyframes reveal-third {
   0% {color: black;}
   100% {color: white;}
+}
+#result{
+  margin-top: 21%;
+margin-left: 14%;
+position: absolute;
+background-color: white;
 }
