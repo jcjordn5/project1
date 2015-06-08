@@ -1,21 +1,13 @@
 body {
   font-family: 'Press Start 2P', cursive;
 }
-@media (min-width:1350px) {
-#wrapper {
-  margin-left: 5vw;
+#container {
+  max-width: 1200px;
 }
-}
-
 #overBoard {
   left:26%;
   position: absolute;
   top: 10%;
-}
-@media (min-width:1350px) {
-#overBoard {
-  left:34.5%;
-}
 }
 #overlay {
   background-color: black;
@@ -25,11 +17,6 @@ body {
 	overflow-y: hidden;
   height:100%;
   width: 100%;
-}
-@media (min-width:1350px) {
-#wrapper {
-  margin-left: -5vw;
-}
 }
 .goup {
   height: 10%;
@@ -155,21 +142,11 @@ body {
   margin-top: 4vw;
   font-size: 28px;
 }
-@media (min-width:1350px) {
-#score2 {
-  margin-left: -16vw;
-}
-}
 #score2{
   position: absolute;
   margin-top: 4vw;
   margin-left: 59vw;
   font-size: 28px;
-}
-@media (min-width:1350px) {
-#score2 {
-  margin-left: 58vw;
-}
 }
 #setNames {
   z-index: 2;
@@ -187,11 +164,6 @@ body {
   position: absolute;
   background-color: black;
   color: white;
-}
-@media (min-width:1350px) {
-#reset {
-  margin-left: 12.55vw;
-}
 }
 #denied {
   color: white;
