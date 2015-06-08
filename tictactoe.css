@@ -7,6 +7,30 @@
 }
 #overlay {
   background-color: orange;
+  position:absolute;
+  z-index: 1;
+  .slider
+	overflow-y: hidden;
+  height:100%;
+  width: 100%;
+}
+.goup {
+  height: 0%;
+  animation-name: slide-up;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+}
+@keyframes slide-up {
+    0%   {height: 100%;}
+    20%  {height: 80%;}
+    40% {height: 60%;}
+    60% {height: 40%;}
+    80% {height: 20%;}
+    100% {height: 0%;}
+
+}
+#title {
+  text-align: center;
 }
 #board {
   width: 600px;
@@ -20,7 +44,7 @@
   outline: 1px solid #000000;
 }
 #board div:hover {
-  
+  background-color:black;
 }
 .crossBox {
   background-color: red;
@@ -41,14 +65,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-left: -128px;
+  margin-left: -17%;
+  z-index: 2;
 }
 #player2{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-left: 276px;
+  margin-left: 14%;
+  z-index: 2;
 
 }
 #player1score {
@@ -62,4 +88,29 @@
     margin-left: -200px;
     text-align:center;
     margin-top:60px;
+}
+#name1 {
+  position: absolute;
+margin-left: -16vw;
+margin-top: 0vw;
+}
+
+#name2 {
+  position: absolute;
+margin-left: 58vw;
+margin-top: 0vw;
+}
+#setNames {
+  z-index: 2;
+  margin-top:20em;
+  margin-left: 30.5em;
+  position: relative;
+}
+
+#reset {
+  margin-top: .5em;
+margin-left: 50em;
+margin-right: auto;
+display: block;
+position: absolute;
 }
