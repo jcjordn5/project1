@@ -42,7 +42,8 @@ run: function () {
   },
  checkWinner: function () {
 //there are 8 ways to win the game the conditional statements look for these for both X and O
-//also this tally the score to the player objects score property and unbinds the event handlers
+//also this tally the score to the player object's score property and displays the result to the DOM.
+//This method also unbinds the event handlers.
 //from the grid in order to make replays more reliable as well as halt further gameplay when an end
 //state has been reached
    if ((this.cells[0][0].text() === this.cells[0][1].text() && this.cells[0][0].text() === this.cells[0][2].text() && (this.cells[0][0].text() === "X")) ||
