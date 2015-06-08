@@ -3,7 +3,7 @@ body {
 }
 #overboard {
   left:26%;
-  position: relative;
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
