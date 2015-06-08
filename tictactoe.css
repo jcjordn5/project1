@@ -80,14 +80,12 @@ body {
   display: inline-block;
   margin-left: 25vw;
   margin-top: 9vw;
-  transform: rotateY(360deg);
 }
 .displayRight {
   position: absolute;
   display: inline-block;
   margin-left: 56vw;
   margin-top: 9vw;
-  transform: rotateY(360deg);
 }
 .shiftRight {
   animation-name: shift1;
@@ -172,35 +170,6 @@ body {
   left: 10%;
   top: 40%;
   font-size: 60px;
-}
-#first {
-  animation-name: reveal-first;
-  animation-timing-function: ease;
-  animation-duration: 1s;
-}
-@keyframes reveal-first {
-  0% {color: black;}
-  100% {color: white;}
-}
-#second {
-  animation-name: reveal-second;
-  animation-timing-function: ease;
-  animation-delay: 1s;
-  animation-duration: 1s;
-}
-@keyframes reveal-second {
-  0% {color: black;}
-  100% {color: white;}
-}
-#third {
-  animation-name: reveal-third;
-  animation-timing-function: ease;
-  animation-delay: 2s;
-  animation-duration: 1s;
-}
-@keyframes reveal-third {
-  0% {color: black;}
-  100% {color: white;}
 }
 #result{
 padding:10px;

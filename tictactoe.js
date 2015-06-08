@@ -141,11 +141,11 @@ run: function () {
 game.setListeners();
 $('#reset').on('click', function () {game.render()});
 $('#setNames').on('click', function () {
-  $('#playerBoard').append('<h2 id="name1">' + $('#player1').val() + '</h2>');
-  player1.name = $('#player1').val();
-  $('#playerBoard').append('<h2 id="name2">' + $('#player2').val() + '</h2>');
-  player2.name = $('#player2').val();
-  game.run();
+$('#playerBoard').append('<h2 id="name1">' + $('#player1').val() + '</h2>');
+player1.name = $('#player1').val();
+$('#playerBoard').append('<h2 id="name2">' + $('#player2').val() + '</h2>');
+player2.name = $('#player2').val();
+game.run();
 });
 $('#setNames').on('click', function () {$('#player1').remove()});
 $('#setNames').on('click', function () {$('#player2').remove()});
@@ -156,3 +156,4 @@ $('#setNames').on('click', function () {$('.knotBox').addClass("shiftLeft")});
 $('#setNames').on('click', function () {$('.crossBox').addClass("shiftRight")});
 $('#setNames').on('click', function () {$('.knotBox').css("margin-left", "4vw")});
 $('#setNames').on('click', function () {$('.crossBox').css("margin-left", "78vw")});
+setTimeout(function (){$("#title").css("color", "black;")}, 6000);
