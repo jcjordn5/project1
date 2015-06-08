@@ -6,6 +6,12 @@ body {
   left: 27%;
   top: 10%;
 }
+@media(min-width:1200px) {
+  #overBoard {
+    position: absolute;
+    left: 34.5%;
+    top: 10%;
+}
 #overlay {
   background-color: black;
   position:absolute;
@@ -80,12 +86,20 @@ body {
   margin-left: 25vw;
   margin-top: 9vw;
 }
+@media(min-width:1200px) {
+  .displayLeft {
+    margin-left: 15vw;
+  }
 .displayRight {
   position: absolute;
   display: inline-block;
   margin-left: 56vw;
   margin-top: 9vw;
 }
+@media(min-width:1200px) {
+  .displayRight {
+    margin-left: 76vw;
+  }
 .shiftRight {
   animation-name: shift1;
   animation-timing-function: ease;
@@ -132,6 +146,10 @@ body {
   margin-top: 0vw;
   text-align:center;
 }
+@media(min-width:1200px) {
+  #name2 {
+    margin-left: 45vw;
+  }
 #score1 {
   position:absolute;
   margin-left: -15vw;
@@ -144,6 +162,10 @@ body {
   margin-left: 59vw;
   font-size: 28px;
 }
+@media(min-width:1200px) {
+  #score2 {
+    margin-left: 46vw;
+  }
 #setNames {
   z-index: 2;
   margin-top:6vw;
@@ -160,6 +182,10 @@ body {
   position: absolute;
   background-color: black;
   color: white;
+}
+@media(min-width:1200px) {
+  #overBoard {
+    margin-left: 12.5vw;
 }
 #denied {
   color: white;
