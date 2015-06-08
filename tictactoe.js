@@ -42,6 +42,9 @@ run: function () {
   },
  checkWinner: function () {
 //there are 8 ways to win the game the conditional statements look for these for both X and O
+//also this tally the score to the player objects score property and unbinds the event handlers
+//from the grid in order to make replays more reliable as well as halt further gameplay when an end
+//state has been reached
    if ((this.cells[0][0].text() === this.cells[0][1].text() && this.cells[0][0].text() === this.cells[0][2].text() && (this.cells[0][0].text() === "X")) ||
    (this.cells[1][0].text() === this.cells[1][1].text() && this.cells[1][0].text() === this.cells[1][2].text() && (this.cells[1][0].text() === "X")) ||
    (this.cells[2][0].text() === this.cells[2][1].text() && this.cells[2][0].text() === this.cells[2][2].text() && (this.cells[2][0].text() === "X")) ||
@@ -50,21 +53,20 @@ run: function () {
    (this.cells[0][2].text() === this.cells[1][2].text() && this.cells[0][2].text() === this.cells[2][2].text() && (this.cells[0][2].text() === "X")) ||
    (this.cells[0][0].text() === this.cells[1][1].text() && this.cells[0][0].text() === this.cells[2][2].text() && (this.cells[0][0].text() === "X")) ||
    (this.cells[0][2].text() === this.cells[1][1].text() && this.cells[0][2].text() === this.cells[2][0].text() && (this.cells[0][2].text() === "X"))){
-$("#board").append("<h2 id='result'>" +  this.player.name.toUpperCase() +" WINS!!!</h2>");
-player2.score++;
-this.gameOn = false;
-$('#cell1').unbind();
-$('#cell2').unbind();
-$('#cell3').unbind();
-$('#cell4').unbind();
-$('#cell5').unbind();
-$('#cell6').unbind();
-$('#cell7').unbind();
-$('#cell8').unbind();
-$('#cell9').unbind();
+        $("#board").append("<h2 id='result'>" +  this.player.name.toUpperCase() +" WINS!!!</h2>");
+        player2.score++;
+        this.gameOn = false;
+        $('#cell1').unbind();
+        $('#cell2').unbind();
+        $('#cell3').unbind();
+        $('#cell4').unbind();
+        $('#cell5').unbind();
+        $('#cell6').unbind();
+        $('#cell7').unbind();
+        $('#cell8').unbind();
+        $('#cell9').unbind();
     }
-    else if
-       ((this.cells[0][0].text() === this.cells[0][1].text() && this.cells[0][0].text() === this.cells[0][2].text() && (this.cells[0][0].text() === "O")) ||
+    else if((this.cells[0][0].text() === this.cells[0][1].text() && this.cells[0][0].text() === this.cells[0][2].text() && (this.cells[0][0].text() === "O")) ||
       (this.cells[1][0].text() === this.cells[1][1].text() && this.cells[1][0].text() === this.cells[1][2].text() && (this.cells[1][0].text() === "O")) ||
       (this.cells[2][0].text() === this.cells[2][1].text() && this.cells[2][0].text() === this.cells[2][2].text() && (this.cells[2][0].text() === "O")) ||
       (this.cells[0][0].text() === this.cells[1][0].text() && this.cells[0][0].text() === this.cells[2][0].text() && (this.cells[0][0].text() === "O")) ||
@@ -72,18 +74,18 @@ $('#cell9').unbind();
       (this.cells[0][2].text() === this.cells[1][2].text() && this.cells[0][2].text() === this.cells[2][2].text() && (this.cells[0][2].text() === "O")) ||
       (this.cells[0][0].text() === this.cells[1][1].text() && this.cells[0][0].text() === this.cells[2][2].text() && (this.cells[0][0].text() === "O")) ||
       (this.cells[0][2].text() === this.cells[1][1].text() && this.cells[0][2].text() === this.cells[2][0].text() && (this.cells[0][2].text() === "O"))){
-      $("#board").append("<h2 id='result'>" + this.player.name.toUpperCase() + " WINS!!!</h2>");
-      player1.score++;
-      this.gameOn = false;
-      $('#cell1').unbind();
-      $('#cell2').unbind();
-      $('#cell3').unbind();
-      $('#cell4').unbind();
-      $('#cell5').unbind();
-      $('#cell6').unbind();
-      $('#cell7').unbind();
-      $('#cell8').unbind();
-      $('#cell9').unbind();
+        $("#board").append("<h2 id='result'>" + this.player.name.toUpperCase() + " WINS!!!</h2>");
+        player1.score++;
+        this.gameOn = false;
+        $('#cell1').unbind();
+        $('#cell2').unbind();
+        $('#cell3').unbind();
+        $('#cell4').unbind();
+        $('#cell5').unbind();
+        $('#cell6').unbind();
+        $('#cell7').unbind();
+        $('#cell8').unbind();
+        $('#cell9').unbind();
     }
 
    else if (((this.cells[0][0].text() === "X") || (this.cells[0][0].text() === "O")) && ((this.cells[1][0].text() === "X") || (this.cells[1][0].text() ===
@@ -116,6 +118,7 @@ $('#cell9').unbind();
    this.setListeners();
    this.gameOn = true;
  },
+ //set the event listeners for the game
  setListeners: function () {
    $('#cell1').one('click', function () {game.turn()}).bind(this);
    $('#cell2').one('click', function () {game.turn()}).bind(this);

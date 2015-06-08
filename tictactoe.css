@@ -17,15 +17,11 @@
 .goup {
   height: 0%;
   animation-name: slide-up;
-  animation-timing-function: linear;
-  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-duration: 2s;
 }
 @keyframes slide-up {
     0%   {height: 100%;}
-    20%  {height: 80%;}
-    40% {height: 60%;}
-    60% {height: 40%;}
-    80% {height: 20%;}
     100% {height: 0%;}
 
 }
