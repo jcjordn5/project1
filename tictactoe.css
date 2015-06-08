@@ -2,10 +2,9 @@ body {
   font-family: 'Press Start 2P', cursive;
 }
 #overBoard {
-  margin-left:25vw;
-  margin-top: 3vw;
   position: absolute;
-
+  left: 27%;
+  top: 10%;
 }
 #overlay {
   background-color: black;
@@ -94,7 +93,7 @@ body {
 }
 @keyframes shift1 {
   0% {margin-left:56vw;}
-  100% {margin-left: 78vw;}
+  100% {margin-left: 80vw;}
 }
 .shiftLeft {
   animation-name: shift2;
