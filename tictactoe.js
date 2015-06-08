@@ -12,7 +12,6 @@ var player2 = {
 
 var game = {
     player: player1,
-    curPlayer:0,
    gameOn:true,
  cells: [[$("#cell1"), $("#cell4"), $("#cell7")],
           [$("#cell2"), $("#cell5"), $("#cell8")],
@@ -23,13 +22,11 @@ run: function () {
     $("#overlay").addClass("goup");
     $("#overlay").css("height", "0%");
   }
-
-
 },
  //this method alternates turns by switching the player property and event listener everytime a grid box is appended
   turn: function () {
     if (this.gameOn){
-      if (this.curPlayer % 2 === 0) {
+      if (this.player === player1) {
         $(event.target).closest('div').html('<div class="knotBox">' + this.player.sign + '</div>');
         this.checkWinner();
         this.player = player2;
@@ -56,6 +53,15 @@ run: function () {
 $("#board").append("<h2 id='result'>" +  this.player.name.toUpperCase() +" WINS!!!</h2>");
 player2.score++;
 this.gameOn = false;
+$('#cell1').unbind();
+$('#cell2').unbind();
+$('#cell3').unbind();
+$('#cell4').unbind();
+$('#cell5').unbind();
+$('#cell6').unbind();
+$('#cell7').unbind();
+$('#cell8').unbind();
+$('#cell9').unbind();
     }
     else if
        ((this.cells[0][0].text() === this.cells[0][1].text() && this.cells[0][0].text() === this.cells[0][2].text() && (this.cells[0][0].text() === "O")) ||
@@ -69,6 +75,15 @@ this.gameOn = false;
       $("#board").append("<h2 id='result'>" + this.player.name.toUpperCase() + " WINS!!!</h2>");
       player1.score++;
       this.gameOn = false;
+      $('#cell1').unbind();
+      $('#cell2').unbind();
+      $('#cell3').unbind();
+      $('#cell4').unbind();
+      $('#cell5').unbind();
+      $('#cell6').unbind();
+      $('#cell7').unbind();
+      $('#cell8').unbind();
+      $('#cell9').unbind();
     }
 
    else if (((this.cells[0][0].text() === "X") || (this.cells[0][0].text() === "O")) && ((this.cells[1][0].text() === "X") || (this.cells[1][0].text() ===
@@ -79,6 +94,15 @@ this.gameOn = false;
    && ((this.cells[2][2].text() === "X") || (this.cells[2][2].text() === "O"))){
      $("#board").append("<h2 id='result'>TIE!!!</h2>");
      this.gameOn = false;
+     $('#cell1').unbind();
+     $('#cell2').unbind();
+     $('#cell3').unbind();
+     $('#cell4').unbind();
+     $('#cell5').unbind();
+     $('#cell6').unbind();
+     $('#cell7').unbind();
+     $('#cell8').unbind();
+     $('#cell9').unbind();
    }
  },
  //render resets the game by going through the two dimensional array cells and resets their value to null
