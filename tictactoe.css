@@ -1,10 +1,11 @@
 body {
   font-family: 'Press Start 2P', cursive;
 }
-#overBoard {
-  position: absolute;
-  left: 27%;
-  top: 10%;
+#overboard {
+  left:26%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 #overlay {
   background-color: black;
@@ -93,12 +94,16 @@ body {
 }
 @keyframes shift1 {
   0% {margin-left:56vw;}
-  100% {margin-left: 80vw;}
+  100% {margin-left: 78vw;}
 }
 .shiftLeft {
   animation-name: shift2;
   animation-timing-function: ease;
   animation-duration: 1s;
+}
+@keyframes shift2 {
+  0% {margin-left:25vw;}
+  100% {margin-left: 4vw;}
 }
 #player1{
   position: absolute;
@@ -128,10 +133,6 @@ body {
   margin-top: 0vw;
   text-align:center;
 }
-@media(min-width:1200px) {
-  #name2 {
-    margin-left: 45vw;
-  }
 #score1 {
   position:absolute;
   margin-left: -15vw;
@@ -144,10 +145,6 @@ body {
   margin-left: 59vw;
   font-size: 28px;
 }
-@media(min-width:1200px) {
-  #score2 {
-    margin-left: 46vw;
-  }
 #setNames {
   z-index: 2;
   margin-top:6vw;
@@ -176,8 +173,8 @@ body {
 }
 #result{
 padding:10px;
-margin-top: 45%;
-margin-left: 24%;
+margin-top: 21%;
+margin-left: 14%;
 position: absolute;
 background-color: white;
 }
