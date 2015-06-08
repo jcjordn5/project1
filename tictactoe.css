@@ -1,8 +1,11 @@
 body {
   font-family: 'Press Start 2P', cursive;
 }
-#container {
-  max-width: 1200px;
+.floatL{
+  float: left;
+}
+.floatR{
+  float:right;
 }
 #overBoard {
   left:26%;
