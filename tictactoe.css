@@ -6,12 +6,6 @@ body {
   left: 27%;
   top: 10%;
 }
-@media(min-width:1200px) {
-  #overBoard {
-    position: absolute;
-    left: 34.5%;
-    top: 10%;
-}
 #overlay {
   background-color: black;
   position:absolute;
@@ -86,20 +80,12 @@ body {
   margin-left: 25vw;
   margin-top: 9vw;
 }
-@media(min-width:1200px) {
-  .displayLeft {
-    margin-left: 15vw;
-  }
 .displayRight {
   position: absolute;
   display: inline-block;
   margin-left: 56vw;
   margin-top: 9vw;
 }
-@media(min-width:1200px) {
-  .displayRight {
-    margin-left: 76vw;
-  }
 .shiftRight {
   animation-name: shift1;
   animation-timing-function: ease;
@@ -113,10 +99,6 @@ body {
   animation-name: shift2;
   animation-timing-function: ease;
   animation-duration: 1s;
-}
-@keyframes shift2 {
-  0% {margin-left:25vw;}
-  100% {margin-left: 4vw;}
 }
 #player1{
   position: absolute;
@@ -182,10 +164,6 @@ body {
   position: absolute;
   background-color: black;
   color: white;
-}
-@media(min-width:1200px) {
-  #overBoard {
-    margin-left: 12.5vw;
 }
 #denied {
   color: white;
