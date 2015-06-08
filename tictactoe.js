@@ -24,6 +24,9 @@ run: function () {
     $("#title").addClass("top");
     $("#title").css("font-size", "36px");
   }
+  else {
+    $("#overlay").html("<h2 id='denied'>SORRY NO NAME NO GAME!!!</h2>")
+  }
 },
  //this method alternates turns by switching the player property and event listener everytime a grid box is appended
   turn: function () {
