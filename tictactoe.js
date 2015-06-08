@@ -155,5 +155,5 @@ $('#setNames').on('click', function () {$('.crossBox').css("margin-top", "15.5vw
 $('#setNames').on('click', function () {$('.knotBox').addClass("shiftLeft")});
 $('#setNames').on('click', function () {$('.crossBox').addClass("shiftRight")});
 $('#setNames').on('click', function () {$('.knotBox').css("margin-left", "4vw")});
-$('#setNames').on('click', function () {$('.crossBox').css("margin-left", "78vw")});
+$('#setNames').on('click', function () {$('.crossBox').css("margin-left", "80vw")});
 setTimeout(function (){$("#title").css("color", "black;")}, 6000);
