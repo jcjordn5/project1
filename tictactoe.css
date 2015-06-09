@@ -2,8 +2,8 @@ body {
   font-family: 'Press Start 2P', cursive;
 }
 #overBoard {
-  margin-top: 90px;
-  margin-left: 27%;
+  margin-top: 70px;
+  margin-left: 26.5%;
   position: absolute;
 }
 @media all and (min-width:1300px) {
