@@ -85,13 +85,13 @@ body {
   position: absolute;
   display: inline-block;
   margin-left: 25%;
-  margin-top: 0%;
+  margin-top: 100px;
 }
 .displayRight {
   position: absolute;
   display: inline-block;
   margin-left: 55%;
-  margin-top: 0%;
+  margin-top: 100px;
 }
 .shiftRight {
   animation-name: shift1;
