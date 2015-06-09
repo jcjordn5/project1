@@ -1,11 +1,15 @@
 body {
   font-family: 'Press Start 2P', cursive;
 }
-#overboard {
-  left:26%;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+#overBoard {
+  margin-top: 90px;
+  margin-left: 27%;
+  position: absolute;
+}
+@media all and (min-width:1300px) {
+  #overBoard{
+  margin-left: 34.5%;
+}
 }
 #overlay {
   background-color: black;
@@ -16,6 +20,7 @@ body {
   height:100%;
   width: 100%;
 }
+
 .goup {
   height: 10%;
   animation-name: slide-up;
@@ -42,6 +47,7 @@ body {
   0% {font-size: 100px;}
   100% {font-size: 36px;}
 }
+
 #board {
   width: 600px;
   height: 600px;
@@ -78,14 +84,26 @@ body {
 .displayLeft {
   position: absolute;
   display: inline-block;
-  margin-left: 25vw;
-  margin-top: 9vw;
+  margin-left: 25%;
+  margin-top: 100px;
+}
+@media all and (min-width:1300px) {
+  .displayLeft {
+    margin-left: 28%;
+    margin-top: 235px;
+  }
 }
 .displayRight {
   position: absolute;
   display: inline-block;
-  margin-left: 56vw;
-  margin-top: 9vw;
+  margin-left: 55%;
+  margin-top: 100px;
+}
+@media all and (min-width:1300px) {
+  .displayRight {
+    margin-left: 59%;
+    margin-top: 235px;
+  }
 }
 .shiftRight {
   animation-name: shift1;
@@ -93,8 +111,14 @@ body {
   animation-duration: 1s;
 }
 @keyframes shift1 {
-  0% {margin-left:56vw;}
-  100% {margin-left: 78vw;}
+  0% {margin-left:55%;}
+  100% {margin-left: 77.5%;}
+}
+@media all and (min-width:1300px) {
+  @keyframes shift1 {
+    0% {margin-left:59%;}
+    100% {margin-left: 77.5%;}
+  }
 }
 .shiftLeft {
   animation-name: shift2;
@@ -102,8 +126,14 @@ body {
   animation-duration: 1s;
 }
 @keyframes shift2 {
-  0% {margin-left:25vw;}
-  100% {margin-left: 4vw;}
+  0% {margin-left:25%;}
+  100% {margin-left: 10%;}
+}
+@media all and (min-width:1300px) {
+  @keyframes shift1 {
+    0% {margin-left:28%;}
+    100% {margin-left: 77.5%;}
+  }
 }
 #player1{
   position: absolute;
@@ -123,26 +153,26 @@ body {
 }
 #name1 {
   position: absolute;
-  margin-left: -16vw;
-  margin-top: 0vw;
+  margin-left: -20%;
+  margin-top: 1px;
   text-align:center;
 }
 #name2 {
   position: absolute;
-  margin-left: 58vw;
-  margin-top: 0vw;
+  margin-left: 120%;
+  margin-top: 1px;
   text-align:center;
 }
 #score1 {
   position:absolute;
-  margin-left: -15vw;
-  margin-top: 4vw;
+  margin-left: -20%;
+  margin-top: 40px;
   font-size: 28px;
 }
 #score2{
   position: absolute;
-  margin-top: 4vw;
-  margin-left: 59vw;
+  margin-top: 40px;
+  margin-left: 120%;
   font-size: 28px;
 }
 #setNames {
@@ -154,8 +184,8 @@ body {
   color: black;
 }
 #reset {
-  margin-top: .5vw;
-  margin-left: 19vw;
+  margin-top: 10px;
+  margin-left: auto;
   margin-right: auto;
   display: block;
   position: absolute;
@@ -173,8 +203,8 @@ body {
 }
 #result{
 padding:10px;
-margin-top: 21%;
-margin-left: 14%;
+margin-top: 44%;
+margin-left: 31%;
 position: absolute;
 background-color: white;
 }
