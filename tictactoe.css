@@ -93,6 +93,11 @@ body {
     margin-top: 235px;
   }
 }
+@media all and (max-width:1100px) {
+  .displayLeft {
+  display: none;
+  }
+}
 .displayRight {
   position: absolute;
   display: inline-block;
@@ -103,6 +108,11 @@ body {
   .displayRight {
     margin-left: 59%;
     margin-top: 235px;
+  }
+}
+@media all and (max-width:1100px) {
+  .displayRight {
+  display: none;
   }
 }
 .shiftRight {
@@ -185,7 +195,7 @@ body {
 }
 #reset {
   margin-top: 10px;
-  margin-left: auto;
+  left: 40%;
   margin-right: auto;
   display: block;
   position: absolute;
