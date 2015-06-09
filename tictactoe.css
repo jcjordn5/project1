@@ -1,16 +1,15 @@
 body {
   font-family: 'Press Start 2P', cursive;
 }
-.floatL{
-  float: left;
-}
-.floatR{
-  float:right;
-}
 #overBoard {
-  left:26%;
+  margin-top: 90px;
+  margin-left: 27%;
   position: absolute;
-  top: 10%;
+}
+@media all and (min-width:1300px) {
+  #overBoard{
+  margin-left: 34.5%;
+}
 }
 #overlay {
   background-color: black;
@@ -21,6 +20,7 @@ body {
   height:100%;
   width: 100%;
 }
+
 .goup {
   height: 10%;
   animation-name: slide-up;
@@ -129,26 +129,26 @@ body {
 }
 #name1 {
   position: absolute;
-  margin-left: -16vw;
-  margin-top: 0vw;
+  margin-left: -20%;
+  margin-top: 1px;
   text-align:center;
 }
 #name2 {
   position: absolute;
-  margin-left: 58vw;
-  margin-top: 0vw;
+  margin-left: 120%;
+  margin-top: 1px;
   text-align:center;
 }
 #score1 {
   position:absolute;
-  margin-left: -15vw;
-  margin-top: 4vw;
+  margin-left: -20%;
+  margin-top: 40px;
   font-size: 28px;
 }
 #score2{
   position: absolute;
-  margin-top: 4vw;
-  margin-left: 59vw;
+  margin-top: 40px;
+  margin-left: 120%;
   font-size: 28px;
 }
 #setNames {
@@ -160,8 +160,8 @@ body {
   color: black;
 }
 #reset {
-  margin-top: .5vw;
-  margin-left: 19vw;
+  margin-top: 10px;
+  margin-left: auto;
   margin-right: auto;
   display: block;
   position: absolute;
@@ -179,8 +179,8 @@ body {
 }
 #result{
 padding:10px;
-margin-top: 21%;
-margin-left: 14%;
+margin-top: 41%;
+margin-left: 35%;
 position: absolute;
 background-color: white;
 }
