@@ -154,6 +154,6 @@ $('#setNames').on('click', function () {$('.knotBox').css("margin-top", "15.5vw"
 $('#setNames').on('click', function () {$('.crossBox').css("margin-top", "15.5vw")});
 $('#setNames').on('click', function () {$('.knotBox').addClass("shiftLeft")});
 $('#setNames').on('click', function () {$('.crossBox').addClass("shiftRight")});
-$('#setNames').on('click', function () {$('.knotBox').css("margin-left", "4vw")});
-$('#setNames').on('click', function () {$('.crossBox').css("margin-left", "80vw")});
+$('#setNames').on('click', function () {$('.knotBox').css("margin-left", "10%")});
+$('#setNames').on('click', function () {$('.crossBox').css("margin-left", "77.5%")});
 setTimeout(function (){$("#title").css("color", "black;")}, 6000);

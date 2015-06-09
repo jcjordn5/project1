@@ -84,14 +84,14 @@ body {
 .displayLeft {
   position: absolute;
   display: inline-block;
-  margin-left: 25vw;
-  margin-top: 9vw;
+  margin-left: 25%;
+  margin-top: 0%;
 }
 .displayRight {
   position: absolute;
   display: inline-block;
-  margin-left: 56vw;
-  margin-top: 9vw;
+  margin-left: 55%;
+  margin-top: 0%;
 }
 .shiftRight {
   animation-name: shift1;
@@ -99,8 +99,8 @@ body {
   animation-duration: 1s;
 }
 @keyframes shift1 {
-  0% {margin-left:56vw;}
-  100% {margin-left: 78vw;}
+  0% {margin-left:55%;}
+  100% {margin-left: 77.5%;}
 }
 .shiftLeft {
   animation-name: shift2;
@@ -108,8 +108,8 @@ body {
   animation-duration: 1s;
 }
 @keyframes shift2 {
-  0% {margin-left:25vw;}
-  100% {margin-left: 4vw;}
+  0% {margin-left:25%;}
+  100% {margin-left: 10%;}
 }
 #player1{
   position: absolute;
