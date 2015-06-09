@@ -10,4 +10,4 @@ Then I proceeded to answer the hardest question how to determine the winner whil
 
 The end states for the winner function was also a useful springboard to tally player score and to unbind event handlers the latter was especially since I found that I did not do this, the there would handlers from previously instances of the game caused skipped turns on replay.
 
-When the users presses the rests button runs a loop that iterates through the cells array with a jquery command to fill all grid spaces with "" and the event handlers are also reassigned and binded the the current instance of the game. The thing I would like to do most in the future is to make the grid responsive.
+When the users presses the rests button runs a loop that iterates through the cells array with a jquery command to fill all grid spaces with "" and the event handlers are also reassigned and binded the the current instance of the game. The thing I would like to do most in the future is to make the grid responsive, impliment AI for the p[ossibiliy of a single player game, and wrestle with my custom font that abolutely hates being centered.
