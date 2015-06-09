@@ -97,8 +97,7 @@ run: function () {
    else if (((this.cells[0][0].text() === "X") || (this.cells[0][0].text() === "O")) && ((this.cells[1][0].text() === "X") || (this.cells[1][0].text() ===
    "O")) && ((this.cells[2][0].text() === "X") || (this.cells[2][0].text() === "O")) && ((this.cells[0][1].text() === "X") || (this.cells[0][1].text()
    === "O")) && ((this.cells[1][1].text() === "X") || (this.cells[1][1].text() === "O")) && ((this.cells[1][2].text() === "X") || (this.cells[1][2].text()
-   === "O"))
-   && ((this.cells[0][2].text() === "X") || (this.cells[0][2].text() === "O")) && ((this.cells[1][2].text() === "X") || (this.cells[1][2].text() === "O"))
+   === "O")) && ((this.cells[0][2].text() === "X") || (this.cells[0][2].text() === "O")) && ((this.cells[1][2].text() === "X") || (this.cells[1][2].text() === "O"))
    && ((this.cells[2][2].text() === "X") || (this.cells[2][2].text() === "O"))){
      $("#board").append("<h2 id='result'>TIE!!!</h2>");
      this.gameOn = false;
@@ -156,4 +155,3 @@ $('#setNames').on('click', function () {$('.knotBox').addClass("shiftLeft")});
 $('#setNames').on('click', function () {$('.crossBox').addClass("shiftRight")});
 $('#setNames').on('click', function () {$('.knotBox').css("margin-left", "10%")});
 $('#setNames').on('click', function () {$('.crossBox').css("margin-left", "77.5%")});
-setTimeout(function (){$("#title").css("color", "black;")}, 6000);
