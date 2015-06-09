@@ -100,7 +100,7 @@ body {
   margin-top: 100px;
 }
 @media all and (min-width:1300px) {
-  .displayLeft {
+  .displayRight {
     margin-left: 59%;
     margin-top: 235px;
   }
