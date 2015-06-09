@@ -87,11 +87,23 @@ body {
   margin-left: 25%;
   margin-top: 100px;
 }
+@media all and (min-width:1300px) {
+  .displayLeft {
+    margin-left: 28%;
+    margin-top: 235px;
+  }
+}
 .displayRight {
   position: absolute;
   display: inline-block;
   margin-left: 55%;
   margin-top: 100px;
+}
+@media all and (min-width:1300px) {
+  .displayLeft {
+    margin-left: 59%;
+    margin-top: 235px;
+  }
 }
 .shiftRight {
   animation-name: shift1;
@@ -102,6 +114,12 @@ body {
   0% {margin-left:55%;}
   100% {margin-left: 77.5%;}
 }
+@media all and (min-width:1300px) {
+  @keyframes shift1 {
+    0% {margin-left:59%;}
+    100% {margin-left: 77.5%;}
+  }
+}
 .shiftLeft {
   animation-name: shift2;
   animation-timing-function: ease;
@@ -110,6 +128,12 @@ body {
 @keyframes shift2 {
   0% {margin-left:25%;}
   100% {margin-left: 10%;}
+}
+@media all and (min-width:1300px) {
+  @keyframes shift1 {
+    0% {margin-left:28%;}
+    100% {margin-left: 77.5%;}
+  }
 }
 #player1{
   position: absolute;
